@@ -39,6 +39,12 @@ return require('packer').startup(function(use)
 
   -- lsp install tool
   use { "williamboman/mason.nvim" }
+
+  -- auto pair
+  use {
+    "windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+  }
   
   -- auto save
   use({
@@ -48,6 +54,9 @@ return require('packer').startup(function(use)
       }
     end,
   })
+
+  -- buffer line
+  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
 
   -- file tree
   use {

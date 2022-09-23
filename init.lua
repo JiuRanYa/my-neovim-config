@@ -25,6 +25,8 @@ require'nvim-treesitter.configs'.setup {
 -- lsp install tool
 require("mason").setup()
 
+require("bufferline").setup{}
+
 --theme
 vim.cmd[[colorscheme tokyonight]]
 

@@ -6,9 +6,23 @@ function map(mode, lhs, rhs, opts)
     vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
+-- leader 为空
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 map("n", "<C-b>", ":NvimTreeToggle<cr>", opts)
 map("n", "<C-f>", ":Telescope find_files<cr>", opts)
 map("n", ";", ":noh<cr>", opts)
+
+-- 窗口左右跳转
+map("n", "<leader>h", "<C-w>h", opt)
+map("n", "<C-j>", "<C-w>j", opt)
+map("n", "<C-k>", "<C-w>k", opt)
+map("n", "<leader>l", "<C-w>l", opt)
+
+-- buffer line 切换
+map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
+map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
 
 local pluginKeys = {}
 
