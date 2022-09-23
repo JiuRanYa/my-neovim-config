@@ -10,13 +10,17 @@ cmp.setup {
     end,
   },
   -- 来源
-  sources = cmp.config.sources({
-    { name = 'nvim_lsp' },
-    -- For vsnip users.
-    { name = 'vsnip' },
-  }, { { name = 'buffer' },
-  { name = 'path' }
-}),
+  sources = cmp.config.sources(
+    {
+      { name = 'nvim_lsp' },
+      -- For vsnip users.
+      { name = 'vsnip' },
+    }, 
+    {
+      { name = 'buffer' },
+      { name = 'path' }
+    }
+  ),
 
 mapping = require'keybindings'.cmp(cmp),
 -- 使用lspkind-nvim显示类型图标

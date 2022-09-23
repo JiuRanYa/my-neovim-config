@@ -170,6 +170,11 @@ _G.packer_plugins = {
     path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/spaceline.vim",
     url = "https://github.com/glepnir/spaceline.vim"
   },
+  ["telescope-ui-select.nvim"] = {
+    loaded = true,
+    path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/telescope-ui-select.nvim",
+    url = "https://github.com/nvim-telescope/telescope-ui-select.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/telescope.nvim",

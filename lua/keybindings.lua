@@ -8,6 +8,7 @@ end
 
 map("n", "<C-b>", ":NvimTreeToggle<cr>", opts)
 map("n", "<C-f>", ":Telescope find_files<cr>", opts)
+map("n", ";", ":noh<cr>", opts)
 
 local pluginKeys = {}
 

@@ -8,6 +8,7 @@ vim.o.shiftwidth = 2
 require('packer-plugins')
 require('keybindings')
 require('_nvim-cmp')
+require('_telescope')
 
 require("nvim-tree").setup({
   view = {
@@ -26,4 +27,6 @@ require("mason").setup()
 
 --theme
 vim.cmd[[colorscheme tokyonight]]
+
+-- load_extension, somewhere after setup function:
 
