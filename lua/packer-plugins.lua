@@ -5,16 +5,29 @@ return require('packer').startup(function(use)
   -- theme
   --use 'Mofiqul/vscode.nvim'
   use 'folke/tokyonight.nvim'
+  --use { "ellisonleao/gruvbox.nvim" }
+  --use 'bluz71/vim-moonfly-colors'
+
 
   -- code suggestion
   --use {'neoclide/coc.nvim', branch = 'release'}
 
-  use('hrsh7th/nvim-cmp')
-  use('hrsh7th/cmp-buffer')
-  use('hrsh7th/cmp-nvim-lsp')
-  use('hrsh7th/cmp-path')
-  use('hrsh7th/cmp-cmdline')
-  use('neovim/nvim-lspconfig')
+  use 'hrsh7th/nvim-cmp' 
+  use 'hrsh7th/cmp-nvim-lsp' 
+  use 'prabirshrestha/vim-lsp'
+
+  use 'hrsh7th/cmp-buffer' 
+  use 'hrsh7th/cmp-path' 
+  use 'hrsh7th/cmp-cmdline' 
+  use "f3fora/cmp-spell"
+  use 'neovim/nvim-lspconfig' 
+  use "onsails/lspkind-nvim"
+  use "tami5/lspsaga.nvim" 
+  use("hrsh7th/cmp-nvim-lsp-signature-help") -- { name = 'nvim_lsp_signature_help' }
+
+  -- 常见编程语言代码段
+  use("rafamadriz/friendly-snippets")
+
   -- vsnip
   use 'hrsh7th/cmp-vsnip'    -- { name = 'vsnip' }
   use 'hrsh7th/vim-vsnip-integ'
@@ -27,15 +40,16 @@ return require('packer').startup(function(use)
   use'ryanoasis/vim-devicons'
   use'glepnir/spaceline.vim'
 
-  -- vue higlight
-  use'posva/vim-vue'
-
   -- indent line
-  --use "lukas-reineke/indent-blankline.nvim"
-  use "Yggdroot/indentLine"
+  use "lukas-reineke/indent-blankline.nvim"
+  --use "Yggdroot/indentLine"
 
   -- auto close tag html
   use'windwp/nvim-ts-autotag'
+
+
+  -- dashboard
+  use {'glepnir/dashboard-nvim'}
 
   -- lsp install tool
   use { "williamboman/mason.nvim" }
@@ -48,11 +62,7 @@ return require('packer').startup(function(use)
   
   -- auto save
   use({
-    "Pocco81/auto-save.nvim",
-    config = function()
-      require("auto-save").setup {
-      }
-    end,
+    "Pocco81/auto-save.nvim"
   })
 
   -- buffer line
@@ -67,12 +77,21 @@ return require('packer').startup(function(use)
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
 
+  use {
+    'lewis6991/gitsigns.nvim',
+  }
+
   -- javascript higlight
   use 'pangloss/vim-javascript'
 
+  -- vim-vue
+  use 'posva/vim-vue'
+
+  -- use neovim as language serve by lua to inject lsp
+  use 'jose-elias-alvarez/null-ls.nvim'
+
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
-  use {'nvim-telescope/telescope-ui-select.nvim' }
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
 

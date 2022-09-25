@@ -1,14 +1,21 @@
 vim.o.relativenumber = true
-vim.g.loaded = 1
-vim.g.loaded_netrwPlugin = 1
 vim.o.cursorline = true
 
 vim.o.shiftwidth = 2
+vim.o.smartindent = true
+vim.otabstop = 4
+vim.o.expandtab = true
 
 require('packer-plugins')
 require('keybindings')
-require('_nvim-cmp')
+require('_nvimcmp')
 require('_telescope')
+require('_gitsigns')
+require('_dashboard')
+require('_indentLine')
+require('_treeSitter')
+require('colortheme')
+
 
 require("nvim-tree").setup({
   view = {
@@ -22,13 +29,13 @@ require'nvim-treesitter.configs'.setup {
   }
 }
 
+require("null-ls").setup({
+  sources = {
+    require("null-ls").builtins.formatting.stylua,
+  },
+})
+
 -- lsp install tool
 require("mason").setup()
 
 require("bufferline").setup{}
-
---theme
-vim.cmd[[colorscheme tokyonight]]
-
--- load_extension, somewhere after setup function:
-

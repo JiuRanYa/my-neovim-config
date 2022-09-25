@@ -16,8 +16,6 @@ map("n", ";", ":noh<cr>", opts)
 
 -- 窗口左右跳转
 map("n", "<leader>h", "<C-w>h", opt)
-map("n", "<C-j>", "<C-w>j", opt)
-map("n", "<C-k>", "<C-w>k", opt)
 map("n", "<leader>l", "<C-w>l", opt)
 
 -- buffer line 切换
