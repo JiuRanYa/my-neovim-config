@@ -6,16 +6,15 @@ vim.o.smartindent = true
 vim.otabstop = 4
 vim.o.expandtab = true
 
-require('packer-plugins')
-require('keybindings')
 require('_nvimcmp')
 require('_telescope')
 require('_gitsigns')
 require('_dashboard')
 require('_indentLine')
 require('_treeSitter')
+require('packer-plugins')
+require('keybindings')
 require('colortheme')
-
 
 require("nvim-tree").setup({
   view = {

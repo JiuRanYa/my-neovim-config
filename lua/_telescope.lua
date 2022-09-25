@@ -9,6 +9,5 @@ require('telescope').setup{
       }
     }
   },
-  pickers = {
-  }
+  pickers = {}
 }

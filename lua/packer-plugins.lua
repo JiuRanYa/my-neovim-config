@@ -3,14 +3,11 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- theme
-  --use 'Mofiqul/vscode.nvim'
-  use 'folke/tokyonight.nvim'
+  use 'Mofiqul/vscode.nvim'
+  --use 'folke/tokyonight.nvim'
   --use { "ellisonleao/gruvbox.nvim" }
   --use 'bluz71/vim-moonfly-colors'
-
-
-  -- code suggestion
-  --use {'neoclide/coc.nvim', branch = 'release'}
+  use 'lighthaus-theme/vim-lighthaus'
 
   use 'hrsh7th/nvim-cmp' 
   use 'hrsh7th/cmp-nvim-lsp' 
@@ -21,8 +18,6 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-cmdline' 
   use "f3fora/cmp-spell"
   use 'neovim/nvim-lspconfig' 
-  use "onsails/lspkind-nvim"
-  use "tami5/lspsaga.nvim" 
   use("hrsh7th/cmp-nvim-lsp-signature-help") -- { name = 'nvim_lsp_signature_help' }
 
   -- 常见编程语言代码段
