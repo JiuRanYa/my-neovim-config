@@ -20,7 +20,7 @@ require('telescope').setup{
       preview_cutoff = 120,
     },
 
-    mappings = require("keybindings").telescope()
+    mappings = require("core.keybindings").telescope()
   },
   pickers = {},
   extensions = {}

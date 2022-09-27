@@ -17,7 +17,10 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-cmdline' 
   use "f3fora/cmp-spell"
   use 'neovim/nvim-lspconfig' 
-  use("hrsh7th/cmp-nvim-lsp-signature-help") -- { name = 'nvim_lsp_signature_help' }
+
+  use {
+    "ray-x/lsp_signature.nvim",
+  }
 
   -- 常见编程语言代码段
   use("rafamadriz/friendly-snippets")

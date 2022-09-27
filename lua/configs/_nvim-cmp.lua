@@ -17,19 +17,18 @@ cmp.setup({
     end,
   },
   -- 来源
-  sources = cmp.config.sources({
+  sources = {
     { name = "nvim_lsp" },
     { name = "nvim_lsp_signature_help" },
     -- For vsnip users.
     { name = "vsnip" },
     { name = "buffer" },
     { name = "spell" },
-  }, { { name = "path" } }),
+    { name = "path" },
+  },
 
   -- 快捷键
-  mapping = require("keybindings").cmp(cmp),
-  -- 使用lspkind-nvim显示类型图标
-  formatting = require("_ui").formatting,
+  mapping = require("core.keybindings").cmp(cmp),
 })
 
 -- Use buffer source for `/`.
@@ -41,7 +40,6 @@ cmp.setup.cmdline("/", {
 
 -- Use cmdline & path source for ':'.
 cmp.setup.cmdline(":", {
-  mapping = cmp.mapping.preset.cmdline(),
   sources = cmp.config.sources({
     { name = "path" },
   }, {

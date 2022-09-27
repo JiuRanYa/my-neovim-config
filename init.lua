@@ -1,25 +1,20 @@
-vim.o.relativenumber = true
-vim.o.cursorline = true
+require('configs._telescope')
+require('configs._auto-save')
+require('configs._gitsigns')
+require('configs._dashboard')
+require('configs._indent-line')
+require('configs._tree-sitter')
+require('configs._toggleterm')
+require('configs._nvim-cmp')
+require('configs._nvim-tree')
+require('configs._smart-split')
+require('configs._lsp-config')
 
-vim.o.shiftwidth = 2
-vim.o.smartindent = true
-vim.otabstop = 4
-vim.o.expandtab = true
-vim.o.scrolloff = 12
+require('core.keybindings')
+require('core.packerPlugins')
+require('core.vim-base')
 
-require('packer-plugins')
-require('_telescope')
-require('_autoSave')
-require('_gitsigns')
-require('_dashboard')
-require('_indentLine')
-require('_treeSitter')
-require('_toggleterm')
-require('_nvimcmp')
-require('_nvimTree')
-require('configs.smart-split')
-require('keybindings')
-require('colortheme')
+require('theme._colortheme')
 
 require'nvim-treesitter.configs'.setup {
   autotag = {
