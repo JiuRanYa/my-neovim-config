@@ -5,22 +5,21 @@ vim.o.shiftwidth = 2
 vim.o.smartindent = true
 vim.otabstop = 4
 vim.o.expandtab = true
+vim.o.scrolloff = 12
 
-require('_nvimcmp')
+require('packer-plugins')
 require('_telescope')
+require('_autoSave')
 require('_gitsigns')
 require('_dashboard')
 require('_indentLine')
 require('_treeSitter')
-require('packer-plugins')
+require('_toggleterm')
+require('_nvimcmp')
+require('_nvimTree')
+require('configs.smart-split')
 require('keybindings')
 require('colortheme')
-
-require("nvim-tree").setup({
-  view = {
-    side = "left",
-  }
-})
 
 require'nvim-treesitter.configs'.setup {
   autotag = {
@@ -33,8 +32,6 @@ require("null-ls").setup({
     require("null-ls").builtins.formatting.stylua,
   },
 })
-
 -- lsp install tool
 require("mason").setup()
-
 require("bufferline").setup{}

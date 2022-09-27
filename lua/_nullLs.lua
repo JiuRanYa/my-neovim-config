@@ -4,75 +4,43 @@ if not status then
   return
 end
 
-local formatting = null_ls.builtins.formatting
-local diagnostics = null_ls.builtins.diagnostics
-local code_actions = null_ls.builtins.code_actions
+local api = vim.api
+
+local no_really = {
+    method = null_ls.methods.DIAGNOSTICS,
+    filetypes = { "markdown", "text" },
+    generator = {
+        fn = function(params)
+            local diagnostics = {}
+            -- sources have access to a params object
+            -- containing info about the current file and editor state
+            for i, line in ipairs(params.content) do
+                local col, end_col = line:find("really")
+                if col and end_col then
+                    -- null-ls fills in undefined positions
+                    -- and converts source diagnostics into the required format
+                    table.insert(diagnostics, {
+                        row = i,
+                        col = col,
+                        end_col = end_col,
+                        source = "no-really",
+                        message = "Don't use 'really!'",
+                        severity = 2,
+                    })
+                end
+            end
+            return diagnostics
+        end,
+    },
+}
+
+null_ls.register(no_really)
 
 null_ls.setup({
-  debug = false,
   sources = {
     -- Formatting ---------------------
-    --  brew install shfmt
-    formatting.shfmt,
-    -- StyLua
-    formatting.stylua,
-    -- frontend
-    formatting.prettier.with({ -- 比默认少了 markdown
-      filetypes = {
-        "javascript",
-        "javascriptreact",
-        "typescript",
-        "typescriptreact",
-        "vue",
-        "css",
-        "scss",
-        "less",
-        "html",
-        "json",
-        "yaml",
-        "graphql",
-      },
-      prefer_local = "node_modules/.bin",
-    }),
-    -- rustfmt
-    -- rustup component add rustfmt
-    formatting.rustfmt,
-    -- Python
-    -- pip install black
-    -- asdf reshim python
-    formatting.black.with({ extra_args = { "--fast" } }),
-    -----------------------------------------------------
-    -- Ruby
-    -- gem install rubocop
-    formatting.rubocop,
-    -----------------------------------------------------
-    -- formatting.fixjson,
-    -- Diagnostics  ---------------------
-    diagnostics.eslint.with({
-      prefer_local = "node_modules/.bin",
-    }),
-    -- diagnostics.markdownlint,
-    -- markdownlint-cli2
-    -- diagnostics.markdownlint.with({
-    --   prefer_local = "node_modules/.bin",
-    --   command = "markdownlint-cli2",
-    --   args = { "$FILENAME", "#node_modules" },
-    -- }),
-    --
-    -- code actions ---------------------
-    code_actions.gitsigns,
-    code_actions.eslint.with({
-      prefer_local = "node_modules/.bin",
-    }),
+    null_ls.builtins.formatting.stylua,
+    null_ls.builtins.formatting.prettier,
+    builtins.diagnostics.eslint,
   },
-  -- #{m}: message
-  -- #{s}: source name (defaults to null-ls if not specified)
-  -- #{c}: code (if available)
-  diagnostics_format = "[#{s}] #{m}",
-  on_attach = function(_)
-    vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting()']])
-    -- if client.resolved_capabilities.document_formatting then
-    --   vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
-    -- end
-  end,
 })

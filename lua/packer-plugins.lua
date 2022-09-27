@@ -3,11 +3,10 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- theme
-  use 'Mofiqul/vscode.nvim'
-  --use 'folke/tokyonight.nvim'
+  --use 'Mofiqul/vscode.nvim'
+  use 'folke/tokyonight.nvim'
   --use { "ellisonleao/gruvbox.nvim" }
   --use 'bluz71/vim-moonfly-colors'
-  use 'lighthaus-theme/vim-lighthaus'
 
   use 'hrsh7th/nvim-cmp' 
   use 'hrsh7th/cmp-nvim-lsp' 
@@ -23,11 +22,18 @@ return require('packer').startup(function(use)
   -- 常见编程语言代码段
   use("rafamadriz/friendly-snippets")
 
+  -- prettier format
+  use 'sbdchd/neoformat'
+
+  use "akinsho/toggleterm.nvim"
+
+  -- smart split for resize
+  use "mrjones2014/smart-splits.nvim"
+
   -- vsnip
   use 'hrsh7th/cmp-vsnip'    -- { name = 'vsnip' }
   use 'hrsh7th/vim-vsnip-integ'
   use 'hrsh7th/vim-vsnip'
-  use 'rafamadriz/friendly-snippets'
   -- lspkind
   use 'onsails/lspkind-nvim'
 

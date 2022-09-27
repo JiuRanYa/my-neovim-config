@@ -149,6 +149,11 @@ _G.packer_plugins = {
     path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  neoformat = {
+    loaded = true,
+    path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/neoformat",
+    url = "https://github.com/sbdchd/neoformat"
+  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
@@ -200,6 +205,11 @@ _G.packer_plugins = {
     path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["smart-splits.nvim"] = {
+    loaded = true,
+    path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/smart-splits.nvim",
+    url = "https://github.com/mrjones2014/smart-splits.nvim"
+  },
   ["spaceline.vim"] = {
     loaded = true,
     path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/spaceline.vim",
@@ -210,10 +220,10 @@ _G.packer_plugins = {
     path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["tokyonight.nvim"] = {
+  ["toggleterm.nvim"] = {
     loaded = true,
-    path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
-    url = "https://github.com/folke/tokyonight.nvim"
+    path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
   },
   ["vim-devicons"] = {
     loaded = true,
@@ -224,6 +234,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/vim-javascript",
     url = "https://github.com/pangloss/vim-javascript"
+  },
+  ["vim-lighthaus"] = {
+    loaded = true,
+    path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/vim-lighthaus",
+    url = "https://github.com/lighthaus-theme/vim-lighthaus"
   },
   ["vim-lsp"] = {
     loaded = true,
@@ -244,6 +259,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/vim-vue",
     url = "https://github.com/posva/vim-vue"
+  },
+  ["vscode.nvim"] = {
+    loaded = true,
+    path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/vscode.nvim",
+    url = "https://github.com/Mofiqul/vscode.nvim"
   }
 }
 

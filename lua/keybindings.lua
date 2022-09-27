@@ -6,12 +6,13 @@ function map(mode, lhs, rhs, opts)
     vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
+local actions = require('telescope.actions')
+
 -- leader 为空
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 map("n", "<C-b>", ":NvimTreeToggle<cr>", opts)
-map("n", "<C-f>", ":Telescope find_files<cr>", opts)
 map("n", ";", ":noh<cr>", opts)
 
 -- 窗口左右跳转
@@ -21,6 +22,14 @@ map("n", "<leader>l", "<C-w>l", opt)
 -- buffer line 切换
 map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
+
+-- telescope
+map("n", "<leader>ff", ":Telescope find_files<cr>", opts)
+map("n", "<leader>fw", ":Telescope live_grep<CR>", opt)
+
+map("n", "<leader>tf", "<cmd>ToggleTerm direction=float<cr>")
+map("n", "<leader>th", "<cmd>ToggleTerm size=10 direction=horizontal<cr>")
+map("n", "<leader>tv", "<cmd>ToggleTerm size=80 direction=vertical<cr>")
 
 local pluginKeys = {}
 
@@ -46,8 +55,15 @@ pluginKeys.cmp = function(cmp)
       behavior = cmp.ConfirmBehavior.Replace
     }),
     -- ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
-    ['<C-u>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
-    ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
+  }
+end
+
+pluginKeys.telescope = function(tel)
+  return {
+    i = {
+      ["<C-j"] = actions.move_selection_next,
+      ["<C-k"] = actions.move_selection_previous
+    },
   }
 end
 
