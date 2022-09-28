@@ -17,10 +17,10 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-cmdline' 
   use "f3fora/cmp-spell"
   use 'neovim/nvim-lspconfig' 
-
-  use {
-    "ray-x/lsp_signature.nvim",
-  }
+  use({
+    "glepnir/lspsaga.nvim",
+    branch = "main"
+  })
 
   -- 常见编程语言代码段
   use("rafamadriz/friendly-snippets")
@@ -29,9 +29,6 @@ return require('packer').startup(function(use)
   use 'sbdchd/neoformat'
 
   use "akinsho/toggleterm.nvim"
-
-  -- smart split for resize
-  use "mrjones2014/smart-splits.nvim"
 
   -- vsnip
   use 'hrsh7th/cmp-vsnip'    -- { name = 'vsnip' }
