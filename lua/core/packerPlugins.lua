@@ -25,6 +25,9 @@ return require('packer').startup(function(use)
   -- 常见编程语言代码段
   use("rafamadriz/friendly-snippets")
 
+  -- open project
+  use "ahmedkhalf/project.nvim"
+
   -- prettier format
   use 'sbdchd/neoformat'
 

@@ -1,4 +1,11 @@
-require('telescope').setup{
+
+local status_telescope, telescope = pcall(require, "telescope")
+if not status_telescope then
+  vim.notify("没有找到 telescope")
+  return
+end
+
+telescope.setup{
   defaults = {
     prompt_prefix = " ",
     selection_caret = "❯ ",
@@ -20,8 +27,10 @@ require('telescope').setup{
       preview_cutoff = 120,
     },
 
-    mappings = require("core.keybindings").telescope()
+    mappings = require("core.keybindings").telescope(),
+    file_ignore_patterns = {"node_modules"}
   },
   pickers = {},
   extensions = {}
 }
+

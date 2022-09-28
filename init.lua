@@ -9,6 +9,7 @@ require('configs._nvim-cmp')
 require('configs._nvim-tree')
 require('configs._lsp-config')
 require('configs._lspsage')
+require('configs._project')
 
 require('core.keybindings')
 require('core.packerPlugins')
