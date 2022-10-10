@@ -1,4 +1,4 @@
-vim.opt.spell = true
+vim.opt.spell = false
 vim.opt.spelllang = { 'en_us' }
 
 -- https://github.com/neovim/nvim-lspconfig/wiki/Autocompletion
@@ -29,7 +29,6 @@ cmp.setup({
   -- 来源
   sources = {
     { name = "nvim_lsp" },
-    { name = "nvim_lsp_signature_help" },
     -- For vsnip users.
     { name = "vsnip" },
     { name = "buffer" },

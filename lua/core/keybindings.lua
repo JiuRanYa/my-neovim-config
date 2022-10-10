@@ -14,6 +14,9 @@ local actions = require('telescope.actions')
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- 设置jj退出insert
+map('i', 'jj', '<Esc>', {noremap = true})
+
 map("n", "<C-b>", ":NvimTreeToggle<cr>", opts)
 map("n", ";", ":noh<cr>", opts)
 
@@ -40,7 +43,10 @@ map("n", "<leader>tv", "<cmd>ToggleTerm size=80 direction=vertical<cr>")
 keymap("n", "fd", "<cmd>Lspsaga lsp_finder<CR>", { silent = true })
 
 -- Code action
-keymap({"n","v"}, "ca", "<cmd>Lspsaga code_action<CR>", { silent = true })
+keymap({"n","v"}, "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true })
+
+-- close tab for buffer line
+keymap({"n","v"}, "<leader>cb", ":bdelet<CR>")
 
 -- Rename
 keymap("n", "rn", "<cmd>Lspsaga rename<CR>", { silent = true })

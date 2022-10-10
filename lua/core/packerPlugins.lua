@@ -25,9 +25,6 @@ return require('packer').startup(function(use)
   -- 常见编程语言代码段
   use("rafamadriz/friendly-snippets")
 
-  -- open project
-  use "ahmedkhalf/project.nvim"
-
   -- prettier format
   use 'sbdchd/neoformat'
 
@@ -63,7 +60,7 @@ return require('packer').startup(function(use)
     "windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
   }
-  
+
   -- auto save
   use({
     "Pocco81/auto-save.nvim"

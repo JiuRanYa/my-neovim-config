@@ -8,6 +8,7 @@ vim.o.expandtab = true
 vim.o.scrolloff = 12
 
 vim.g.nvim_tree_respect_buf_cwd = 1
+
 --vim.api.nvim_exec([[
 --  augroup fmt
   --  autocmd!
