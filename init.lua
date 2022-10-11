@@ -1,3 +1,7 @@
+require('core.packerPlugins')
+require('core.vim-base')
+require('core.keybindings')
+
 require('configs._telescope')
 require('configs._auto-save')
 require('configs._gitsigns')
@@ -9,10 +13,6 @@ require('configs._nvim-cmp')
 require('configs._nvim-tree')
 require('configs._lsp-config')
 require('configs._lspsage')
-
-require('core.packerPlugins')
-require('core.vim-base')
-require('core.keybindings')
 
 require('theme._colortheme')
 
