@@ -25,8 +25,8 @@ map("n", "<leader>h", "<C-w>h", opt)
 map("n", "<leader>l", "<C-w>l", opt)
 
 -- buffer line 切换
-map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
-map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
+map("n", "<S-h>", ":BufferLineCyclePrev<CR>", opt)
+map("n", "<S-l>", ":BufferLineCycleNext<CR>", opt)
 
 -- telescope
 map("n", "<leader>ff", ":Telescope find_files<cr>", opts)
@@ -40,10 +40,16 @@ map("n", "<leader>tf", "<cmd>ToggleTerm direction=float<cr>")
 map("n", "<leader>th", "<cmd>ToggleTerm size=10 direction=horizontal<cr>")
 map("n", "<leader>tv", "<cmd>ToggleTerm size=80 direction=vertical<cr>")
 
+-- insert mode move cursor
+map("i", "<C-l>", "<RIGHT>")
+map("i", "<C-h>", "<LEFT>")
+
+
 keymap("n", "fd", "<cmd>Lspsaga lsp_finder<CR>", { silent = true })
 
 -- Code action
 keymap({"n","v"}, "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true })
+
 
 -- close tab for buffer line
 keymap({"n","v"}, "<leader>cb", ":bdelet<CR>")
@@ -63,8 +69,11 @@ keymap("n", "<leader>cd", "<cmd>Lspsaga show_line_diagnostics<CR>", { silent = t
 --keymap("n", "<leader>cd", "<cmd>Lspsaga show_cursor_diagnostics<CR>", { silent = true })
 
 -- Diagnsotic jump can use `<c-o>` to jump back
-keymap("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { silent = true })
-keymap("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", { silent = true })
+keymap("n", "<leader>p", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { silent = true })
+keymap("n", "<leader>n", "<cmd>Lspsaga diagnostic_jump_next<CR>", { silent = true })
+
+-- Comment
+keymap("n", "<leader>/", function() require("Comment.api").toggle.linewise.current() end)
 
 -- Only jump to error
 keymap("n", "[E", function()

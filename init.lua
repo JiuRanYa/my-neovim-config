@@ -13,6 +13,8 @@ require('configs._nvim-cmp')
 require('configs._nvim-tree')
 require('configs._lsp-config')
 require('configs._lspsage')
+require('configs._nvim-surround')
+require('configs._comment')
 
 require('theme._colortheme')
 

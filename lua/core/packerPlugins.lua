@@ -85,6 +85,13 @@ return require('packer').startup(function(use)
     'lewis6991/gitsigns.nvim',
   }
 
+  use {
+    'kylechui/nvim-surround',
+    tag = '*'
+  }
+
+  use 'numToStr/Comment.nvim'
+
   -- javascript higlight
   use 'pangloss/vim-javascript'
 

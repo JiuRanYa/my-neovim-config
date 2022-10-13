@@ -1,6 +1,6 @@
 local status, nvimTree = pcall(require, "nvim-tree")
 if not status then
-  vim.notify("没有找到 null-ls")
+  vim.notify("没有找到 nvimTree")
   return
 end
 
