@@ -17,15 +17,37 @@ cmp.setup({
     end,
   },
   formatting = {
-    format = lspkind.cmp_format({
-      mode = 'symbol',
-      maxwidth = 50,
-      ellipsis_char = '...',
-      before = function (entry, vim_item)
-        return vim_item
-      end
-    })
+    fields = {'menu', 'abbr', 'kind'},
+    format = function(entry, item)
+      local mode = 'symbol'
+      local maxwidth = 50
+      local menu_icon = {
+        nvim_lsp = "[LSP]",
+        vsnip = "[Snippet]",
+        nvim_lua = "[Lua]",
+        path = "[Path]",
+        buffer = "[Buffer]",
+        emoji = "[Emoji]",
+        Snippet = "[Snippet]",
+        omni = "[Omni]",
+      }
+
+      item.menu = menu_icon[entry.source.name]
+      item.mode = mode
+      item.maxwidth = maxwidth
+      return item
+    end,
   },
+  -- formatting = {
+  --   format = lspkind.cmp_format({
+  --     mode = 'symbol',
+  --     maxwidth = 50,
+  --     ellipsis_char = '...',
+  --     before = function (entry, vim_item)
+  --       return vim_item
+  --     end
+  --   })
+  -- },
   -- 来源
   sources = {
     { name = "nvim_lsp" },

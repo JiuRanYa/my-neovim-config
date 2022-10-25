@@ -15,6 +15,7 @@ require('configs._lsp-config')
 require('configs._lspsage')
 require('configs._nvim-surround')
 require('configs._comment')
+require('configs._easy-motion')
 
 require('theme._colortheme')
 

@@ -1,3 +1,4 @@
-local bookmarks = require('bookmarks')
+local status, bookmarks = pcall(require, 'bookmarks')
+if(not status) then return end
 
 bookmarks.setup({})

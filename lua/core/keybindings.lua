@@ -28,6 +28,8 @@ map("n", "<leader>l", "<C-w>l", opt)
 map("n", "<S-h>", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<S-l>", ":BufferLineCycleNext<CR>", opt)
 
+map("n", "<leader>w", "<Plug>(easymotion-overwin-w)")
+
 -- telescope
 map("n", "<leader>ff", ":Telescope find_files<cr>", opts)
 map("n", "<leader>fw", ":Telescope live_grep<CR>", opt)
@@ -44,12 +46,10 @@ map("n", "<leader>tv", "<cmd>ToggleTerm size=80 direction=vertical<cr>")
 map("i", "<C-l>", "<RIGHT>")
 map("i", "<C-h>", "<LEFT>")
 
-
 keymap("n", "fd", "<cmd>Lspsaga lsp_finder<CR>", { silent = true })
 
 -- Code action
 keymap({"n","v"}, "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true })
-
 
 -- close tab for buffer line
 keymap({"n","v"}, "<leader>cb", ":bdelet<CR>")

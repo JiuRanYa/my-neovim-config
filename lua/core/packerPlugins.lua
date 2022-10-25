@@ -5,6 +5,8 @@ return require('packer').startup(function(use)
   -- theme
   --use 'Mofiqul/vscode.nvim'
   use 'folke/tokyonight.nvim'
+  use "EdenEast/nightfox.nvim" -- Packer
+
   --use { "ellisonleao/gruvbox.nvim" }
   --use 'bluz71/vim-moonfly-colors'
 
@@ -27,6 +29,8 @@ return require('packer').startup(function(use)
 
   -- prettier format
   use 'sbdchd/neoformat'
+
+  use 'easymotion/vim-easymotion'
 
   use "akinsho/toggleterm.nvim"
 
