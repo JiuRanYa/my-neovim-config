@@ -54,7 +54,6 @@ return require('packer').startup(function(use)
   -- auto close tag html
   use'windwp/nvim-ts-autotag'
 
-
   -- dashboard
   use {'glepnir/dashboard-nvim'}
 
@@ -83,9 +82,6 @@ return require('packer').startup(function(use)
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
-
-  -- book marks
-  use 'MattesGroeger/vim-bookmarks'
 
   use {
     'lewis6991/gitsigns.nvim',
