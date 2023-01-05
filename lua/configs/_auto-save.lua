@@ -1,13 +1,14 @@
 local status, autosave = pcall(require, 'auto-save')
-if(not status) then return end
+if (not status)
+  then
+    vim.notify('Not find auto-save')
+  end
 
 local config = {
   enabled = true, -- start auto-save when the plugin is loaded (i.e. when your package manager loads it)
   callbacks = { -- functions to be executed at different intervals
-    before_saving = function()
-      require('neoformat')
-    end, -- ran whe
-  }
+  },
+  debounce_delay = 200,
 }
 
 autosave.setup(config)

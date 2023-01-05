@@ -26,9 +26,6 @@ return require('packer').startup(function(use)
     branch = "main"
   })
 
-  -- 常见编程语言代码段
-  use("rafamadriz/friendly-snippets")
-
   -- prettier format
   use 'sbdchd/neoformat'
 

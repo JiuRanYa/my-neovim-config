@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Comment.nvim"] = {
+    loaded = true,
+    path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    url = "https://github.com/numToStr/Comment.nvim"
+  },
   ["auto-save.nvim"] = {
     loaded = true,
     path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/auto-save.nvim",
@@ -119,11 +124,6 @@ _G.packer_plugins = {
     path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
   },
-  ["friendly-snippets"] = {
-    loaded = true,
-    path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/friendly-snippets",
-    url = "https://github.com/rafamadriz/friendly-snippets"
-  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
@@ -154,6 +154,11 @@ _G.packer_plugins = {
     path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/neoformat",
     url = "https://github.com/sbdchd/neoformat"
   },
+  ["nightfox.nvim"] = {
+    loaded = true,
+    path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
+    url = "https://github.com/EdenEast/nightfox.nvim"
+  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
@@ -174,6 +179,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-surround"] = {
+    loaded = true,
+    path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/nvim-surround",
+    url = "https://github.com/kylechui/nvim-surround"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -230,6 +240,11 @@ _G.packer_plugins = {
     path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/vim-devicons",
     url = "https://github.com/ryanoasis/vim-devicons"
   },
+  ["vim-easymotion"] = {
+    loaded = true,
+    path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/vim-easymotion",
+    url = "https://github.com/easymotion/vim-easymotion"
+  },
   ["vim-javascript"] = {
     loaded = true,
     path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/vim-javascript",
@@ -239,6 +254,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/vim-lsp",
     url = "https://github.com/prabirshrestha/vim-lsp"
+  },
+  ["vim-tmux-navigator"] = {
+    loaded = true,
+    path = "/Users/tongsiyuan/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
+    url = "https://github.com/christoomey/vim-tmux-navigator"
   },
   ["vim-vsnip"] = {
     loaded = true,
