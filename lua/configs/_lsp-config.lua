@@ -1,9 +1,3 @@
--- volar for vue3 check
---require'lspconfig'.volar.setup{
---  filetypes = {'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'}
---}
---
---
 local lspconfig = require('lspconfig')
 
 lspconfig.volar.setup({

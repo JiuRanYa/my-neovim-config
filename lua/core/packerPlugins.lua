@@ -57,7 +57,6 @@ return require('packer').startup(function(use)
   -- lsp install tool
   use {
     "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
   }
 
   -- auto pair
