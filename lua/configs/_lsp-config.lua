@@ -13,4 +13,9 @@ lspconfig.volar.setup({
   },
 })
 
-require'lspconfig'.tailwindcss.setup{}
+require'lspconfig'.tailwindcss.setup{
+}
+
+require'lspconfig'.cssls.setup{
+  filetypes = {'scss', 'css', 'html'},
+}

@@ -38,17 +38,6 @@ cmp.setup({
       return item
     end,
   },
-  -- formatting = {
-  --   format = lspkind.cmp_format({
-  --     mode = 'symbol',
-  --     maxwidth = 50,
-  --     ellipsis_char = '...',
-  --     before = function (entry, vim_item)
-  --       return vim_item
-  --     end
-  --   })
-  -- },
-  -- 来源
   sources = {
     { name = "nvim_lsp" },
     -- For vsnip users.
@@ -77,3 +66,10 @@ cmp.setup.cmdline(":", {
     { name = "cmdline" },
   }),
 })
+
+-- Set up lspconfig.
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+-- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
+require('lspconfig')['css-lsp'].setup {
+  capabilities = capabilities
+}

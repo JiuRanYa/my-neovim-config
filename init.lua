@@ -16,6 +16,7 @@ require('configs._lspsage')
 require('configs._nvim-surround')
 require('configs._comment')
 require('configs._easy-motion')
+require('configs._mason')
 
 require('theme._colortheme')
 
@@ -25,11 +26,4 @@ require'nvim-treesitter.configs'.setup {
   }
 }
 
-require("null-ls").setup({
-  sources = {
-    require("null-ls").builtins.formatting.stylua,
-  },
-})
--- lsp install tool
-require("mason").setup()
 require("bufferline").setup{}

@@ -55,7 +55,10 @@ return require('packer').startup(function(use)
   use {'glepnir/dashboard-nvim'}
 
   -- lsp install tool
-  use { "williamboman/mason.nvim" }
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+  }
 
   -- auto pair
   use {
@@ -96,9 +99,6 @@ return require('packer').startup(function(use)
 
   -- vim-vue
   use 'posva/vim-vue'
-
-  -- use neovim as language serve by lua to inject lsp
-  use 'jose-elias-alvarez/null-ls.nvim'
 
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
