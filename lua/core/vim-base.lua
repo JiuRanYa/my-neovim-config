@@ -25,3 +25,6 @@ autocmd("InsertEnter", {
   callback = require("core.utils.im-select").macInsertEnter,
 })
 
+vim.g.vsnip_filetypes = {
+  typescript = { "javascript" },
+}
