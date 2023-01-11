@@ -20,10 +20,4 @@ require('configs._mason')
 
 require('theme._colortheme')
 
-require'nvim-treesitter.configs'.setup {
-  autotag = {
-    enable = true,
-  }
-}
-
 require("bufferline").setup{}
