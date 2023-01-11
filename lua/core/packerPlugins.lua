@@ -96,6 +96,8 @@ return require('packer').startup(function(use)
   -- javascript higlight
   use 'pangloss/vim-javascript'
 
+  use "rafamadriz/friendly-snippets"
+
   -- vim-vue
   use 'posva/vim-vue'
 
