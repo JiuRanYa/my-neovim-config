@@ -5,6 +5,10 @@ return require('packer').startup(function(use)
   -- theme
   --use 'Mofiqul/vscode.nvim'
   use 'folke/tokyonight.nvim'
+  --use 'tiagovla/tokyodark.nvim'
+  use 'navarasu/onedark.nvim'
+  --use 'dracula/vim'
+
   use "EdenEast/nightfox.nvim" -- Packer
 
   --use { "ellisonleao/gruvbox.nvim" }

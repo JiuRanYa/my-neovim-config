@@ -7,6 +7,10 @@ vim.otabstop = 4
 vim.o.expandtab = true
 vim.o.scrolloff = 12
 
+--禁止自动补全
+-- vim.o.wildmode = "list:longest,list:full"
+-- vim.o.completeopt = "menu,menuone,noinsert,noselect"
+
 vim.g.nvim_tree_respect_buf_cwd = 1
 
 local autocmd = vim.api.nvim_create_autocmd

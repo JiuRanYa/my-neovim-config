@@ -15,6 +15,9 @@ treesitter.setup({
     enable = true,
     additional_vim_regex_highlighting = false,
   },
+  autotag = {
+    enable = true,
+  },
   -- 启用代码缩进模块 (=)
   indent = {
     enable = true,

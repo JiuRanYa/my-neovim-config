@@ -16,18 +16,18 @@ cmp.setup({
       vim.fn["vsnip#anonymous"](args.body)
     end,
   },
-  sorting = {
-    comparators = {
-      deprioritize_snippet,
-      cmp.config.compare.exact,
-      cmp.config.compare.locality,
-      cmp.config.compare.recently_used,
-      cmp.config.compare.score,
-      cmp.config.compare.offset,
-      cmp.config.compare.sort_text,
-      cmp.config.compare.order,
-    },
-  },
+  -- sorting = {
+  --   comparators = {
+  --     deprioritize_snippet,
+  --     cmp.config.compare.exact,
+  --     cmp.config.compare.locality,
+  --     cmp.config.compare.recently_used,
+  --     cmp.config.compare.score,
+  --     cmp.config.compare.offset,
+  --     cmp.config.compare.sort_text,
+  --     cmp.config.compare.order,
+  --   },
+  -- },
   formatting = {
     fields = {'menu', 'abbr', 'kind'},
     format = function(entry, item)
