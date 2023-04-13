@@ -17,6 +17,7 @@ require('configs._nvim-surround')
 require('configs._comment')
 require('configs._easy-motion')
 require('configs._mason')
+require('configs._no-config-plugin')
 
 require('theme._colortheme')
 

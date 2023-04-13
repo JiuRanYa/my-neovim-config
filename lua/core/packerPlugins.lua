@@ -20,6 +20,8 @@ return require('packer').startup(function(use)
 
   use 'christoomey/vim-tmux-navigator'
 
+  use 'NvChad/nvim-colorizer.lua'
+
   use 'hrsh7th/cmp-buffer' 
   use 'hrsh7th/cmp-path' 
   use 'hrsh7th/cmp-cmdline' 
