@@ -9,4 +9,3 @@ lspconfig.volar.setup({
 
 require'lspconfig'.tailwindcss.setup{
 }
-
