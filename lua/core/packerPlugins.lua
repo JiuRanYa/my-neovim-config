@@ -6,10 +6,7 @@ return require('packer').startup(function(use)
   --use 'Mofiqul/vscode.nvim'
   use 'folke/tokyonight.nvim'
   --use 'tiagovla/tokyodark.nvim'
-  use 'navarasu/onedark.nvim'
   --use 'dracula/vim'
-
-  use "EdenEast/nightfox.nvim" -- Packer
 
   --use { "ellisonleao/gruvbox.nvim" }
   --use 'bluz71/vim-moonfly-colors'
@@ -38,6 +35,8 @@ return require('packer').startup(function(use)
   use 'easymotion/vim-easymotion'
 
   use "akinsho/toggleterm.nvim"
+
+  use 'HiPhish/nvim-ts-rainbow2'
 
   -- vsnip
   use 'hrsh7th/cmp-vsnip'    -- { name = 'vsnip' }

@@ -17,21 +17,12 @@ vim.opt.foldlevel = 99
 
 vim.g.nvim_tree_respect_buf_cwd = 1
 
-local autocmd = vim.api.nvim_create_autocmd
+-- for nivm-tree
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+vim.opt.termguicolors = true
 
-local myAutoGroup = vim.api.nvim_create_augroup("myAutoGroup", {
-  clear = true,
-})
--- 自动切换输入法，需要安装 im-select
--- https://github.com/daipeihust/im-select
-autocmd("InsertLeave", {
-  group = myAutoGroup,
-  callback = require("core.utils.im-select").macInsertLeave,
-})
-autocmd("InsertEnter", {
-  group = myAutoGroup,
-  callback = require("core.utils.im-select").macInsertEnter,
-})
+local autocmd = vim.api.nvim_create_autocmd
 
 vim.g.vsnip_filetypes = {
   typescript = { "javascript" },

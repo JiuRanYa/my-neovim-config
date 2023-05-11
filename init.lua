@@ -1,7 +1,7 @@
 require('core.packerPlugins')
 require('core.vim-base')
 require('core.keybindings')
-
+--
 require('configs._telescope')
 require('configs._auto-save')
 require('configs._gitsigns')
